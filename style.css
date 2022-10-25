@@ -2,7 +2,7 @@
     --primary-color: #f6f6f6;
     --secondary-color: #d0d0d0;
     --dark-color: #292929;
-    --red-color: #b30101;
+    --red-color: #c61400;
     --green-color: #1fc600;   
 }
 
@@ -15,4 +15,31 @@
 body {
     font-family: 'Mulish', sans-serif;
     line-height: 1.6;
+}
+
+.button {
+    height: 300px;
+    width: 300px;
+    border-radius: 15px;
+    cursor: pointer;
+    -webkit-box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
+    -moz-box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
+    box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
+    transition: all .1 ease-in-out;
+}
+
+.button:hover {
+    transform: scale(.98);
+}
+
+.button-primary {
+    background-color: var(--primary-color);
+}
+
+.button-green {
+    background-color: var(--green-color);
+}
+
+.button-red {
+    background-color: var(--red-color);
 }
