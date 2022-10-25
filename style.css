@@ -17,6 +17,14 @@ body {
     line-height: 1.6;
 }
 
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+    font-size: 350%;
+}
+
 .button {
     height: 100px;
     width: 100px;
