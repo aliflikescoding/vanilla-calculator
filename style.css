@@ -3,12 +3,16 @@
     --secondary-color: #d0d0d0;
     --dark-color: #292929;
     --red-color: #b30101;
-    --green-color: #1fc600;
-    
+    --green-color: #1fc600;   
 }
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
 }
