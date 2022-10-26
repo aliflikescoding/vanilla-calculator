@@ -6,7 +6,8 @@
     --green-color: #1fc600;  
     --sun-color: #ffcc33;
     --moon-color: #dae0ee;
-    --black-color: #000000; 
+    --black-color: #000000;
+    --shadow-color: #0000005c;
 }
 
 * {
