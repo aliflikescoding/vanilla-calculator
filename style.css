@@ -53,9 +53,9 @@ header {
 
 
 .box {
-    -webkit-box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
-    -moz-box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
-    box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
+    -webkit-box-shadow: 9px 7px 11px -5px var(--shadow-color);
+    -moz-box-shadow: 9px 7px 11px -5px var(--shadow-color);
+    box-shadow: 9px 7px 11px -5px var(--shadow-color);
     background-color: var(--secondary-color);
     border-radius: 20px;
 }
@@ -80,9 +80,9 @@ header {
     margin: 10px auto;
     border-radius: 15px;
     background-color: var(--primary-color);
-    -webkit-box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
-    -moz-box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
-    box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
+    -webkit-box-shadow: 9px 7px 11px -5px var(--shadow-color);
+    -moz-box-shadow: 9px 7px 11px -5px var(--shadow-color);
+    box-shadow: 9px 7px 11px -5px var(--shadow-color);
 }
 
 .button {
@@ -90,9 +90,9 @@ header {
     width: 100px;
     border-radius: 15px;
     cursor: pointer;
-    -webkit-box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
-    -moz-box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
-    box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
+    -webkit-box-shadow: 9px 7px 11px -5px var(--shadow-color);
+    -moz-box-shadow: 9px 7px 11px -5px var(--shadow-color);
+    box-shadow: 9px 7px 11px -5px var(--shadow-color);
     transition: all .1 ease-in-out;
     display: flex;
     align-items: center;
