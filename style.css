@@ -131,3 +131,10 @@ header {
     color: var(--primary-color);
 }
 
+.light {
+    color: var(--sun-color);
+}
+
+.dark {
+    color: var(--moon-color);
+}
