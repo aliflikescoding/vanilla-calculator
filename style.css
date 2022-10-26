@@ -46,6 +46,41 @@ header {
     color: var(--dark-color);
 }
 
+
+
+.box {
+    -webkit-box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
+    -moz-box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
+    box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+}
+
+.box-inner {
+    margin: 20px;
+}
+
+.box-horizontal {
+    display: flex;
+}
+
+.box-horizontal .button {
+    display: flex;
+    margin: 10px 10px;
+}
+
+.text-area {
+    width: 470px;
+    height: 200px;
+    margin-left: 5px;
+    margin: 10px auto;
+    border-radius: 15px;
+    background-color: var(--primary-color);
+    -webkit-box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
+    -moz-box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
+    box-shadow: 9px 7px 11px -5px rgba(0,0,0,0.36);
+}
+
 .button {
     height: 100px;
     width: 100px;
@@ -61,6 +96,10 @@ header {
     font-size: 200%;
     font-weight: 1000;
     text-align: center;
+}
+
+.button-long {
+    width: 220px;
 }
 
 .button p {
@@ -81,8 +120,10 @@ header {
 
 .button-green {
     background-color: var(--green-color);
+    color: var(--primary-color);
 }
 
 .button-red {
     background-color: var(--red-color);
+    color: var(--primary-color);
 }
