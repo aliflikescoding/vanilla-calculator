@@ -3,7 +3,10 @@
     --secondary-color: #d0d0d0;
     --dark-color: #292929;
     --red-color: #c61400;
-    --green-color: #1fc600;   
+    --green-color: #1fc600;  
+    --sun-color: #ffcc33;
+    --moon-color: #dae0ee;
+    --black-color: #000000; 
 }
 
 * {
@@ -127,3 +130,4 @@ header {
     background-color: var(--red-color);
     color: var(--primary-color);
 }
+
