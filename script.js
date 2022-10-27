@@ -22,6 +22,7 @@ let equal = document.querySelector('#equal');
 let mode = document.querySelector('#color-mode');
 
 /* User Variables */
+let root = document.querySelector(':root');
 
 /* events */
 one.addEventListener('click', () => {
@@ -59,3 +60,4 @@ dot.addEventListener('click', () => {
 });
 
 /* functions */
+
