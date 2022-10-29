@@ -49,10 +49,11 @@ h2 {
 header {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     color: var(--dark-color);
+    text-align: center;
 }
-
-
 
 .box {
     -webkit-box-shadow: 9px 7px 11px -5px var(--shadow-color);

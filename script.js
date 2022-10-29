@@ -25,6 +25,9 @@ let mode = document.querySelector('#color-mode');
 let root = document.querySelector(':root');
 let modeIcon = document.querySelector('#mode-icon');
 let textArea = document.querySelector('.text-area');
+let numMode = 2;
+var s1 = "";
+var s2 = "";
 
 /* events */
 one.addEventListener('click', () => {
@@ -57,11 +60,11 @@ nine.addEventListener('click', () => {
 zero.addEventListener('click', () => {
     addToString(0);
 });
-dot.addEventListener('click', () => {
-    addToString('.');
-});
 mode.addEventListener('click', () => {
     changeColorMode();
+})
+clear.addEventListener('click', () => {
+    clearAll();
 })
 
 /* functions */
@@ -92,4 +95,27 @@ function changeColorMode() {
             }
         }
     }
+}
+
+let text1 = document.createElement('p');
+let text2 = document.createElement('p');
+textArea.appendChild(text1);
+textArea.appendChild(text2);
+
+function addToString(x) {
+    if (numMode === 1) {
+        s1 += `${x}`;
+        text1.textContent = `${Number(s1)}`;
+    }
+    else {
+        s2 += `${x}`;
+        text2.textContent = `${Number(s2)}`;
+    }
+}
+
+function clearAll() {
+    s1 = "";
+    s2 = "";
+    text1.textContent = ``;
+    text2.textContent = ``;
 }
