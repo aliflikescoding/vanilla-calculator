@@ -78,17 +78,28 @@ header {
 
 .text-area {
     display: flex;
-    align-items: center;
-    justify-content: end;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
     width: 470px;
     height: 200px;
     margin-left: 5px;
     margin: 10px auto;
     border-radius: 15px;
+    font-size: 200%;
+    font-weight: 1000;
     background-color: var(--primary-color);
     -webkit-box-shadow: 9px 7px 11px -5px var(--shadow-color);
     -moz-box-shadow: 9px 7px 11px -5px var(--shadow-color);
     box-shadow: 9px 7px 11px -5px var(--shadow-color);
+}
+
+.area-inside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    margin: 15px 20px;
 }
 
 .button {

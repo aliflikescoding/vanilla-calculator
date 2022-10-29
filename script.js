@@ -24,9 +24,10 @@ let mode = document.querySelector('#color-mode');
 /* User Variables */
 let root = document.querySelector(':root');
 let modeIcon = document.querySelector('#mode-icon');
-let textArea = document.querySelector('.text-area');
-let numMode = 2;
+let areaInside = document.querySelector('.area-inside');
+let numMode = 1;
 var s1 = "";
+var op = "";
 var s2 = "";
 
 /* events */
@@ -65,7 +66,19 @@ mode.addEventListener('click', () => {
 })
 clear.addEventListener('click', () => {
     clearAll();
-})
+});
+plus.addEventListener('click', () => {
+    addOperator('+');
+});
+minus.addEventListener('click', () => {
+    addOperator('-');
+});
+times.addEventListener('click', () => {
+    addOperator('*');
+});
+divide.addEventListener('click', () => {
+    addOperator('/');
+});
 
 /* functions */
 function changeColorMode() {
@@ -99,8 +112,10 @@ function changeColorMode() {
 
 let text1 = document.createElement('p');
 let text2 = document.createElement('p');
-textArea.appendChild(text1);
-textArea.appendChild(text2);
+let operator = document.createElement('p');
+areaInside.appendChild(text1);
+areaInside.appendChild(operator);
+areaInside.appendChild(text2);
 
 function addToString(x) {
     if (numMode === 1) {
@@ -113,9 +128,36 @@ function addToString(x) {
     }
 }
 
+function addOperator(sym) {
+    if (s1.length >= 1) {
+        s2 = '';
+        text2.textContent = ``;
+        if (sym === '+') {
+            op = '+';
+            operator.textContent = `+`;
+        }
+        if (sym === '-') {
+            op = '-';
+            operator.textContent = `-`;
+        }
+        if (sym === '*') {
+            op = '*';
+            operator.innerHTML = `<i class="fa-sharp fa-solid fa-xmark"></i>`;
+        }
+        if (sym === '/') {
+            op = '/';
+            operator.innerHTML = `<i class="fa-solid fa-divide"></i>`;
+        }
+        numMode = 2;
+    }
+}
+
 function clearAll() {
     s1 = "";
+    op = "";
     s2 = "";
     text1.textContent = ``;
+    operator.textContent = ``;
     text2.textContent = ``;
+    numMode = 1;
 }
