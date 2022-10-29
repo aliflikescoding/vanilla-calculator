@@ -23,6 +23,8 @@ let mode = document.querySelector('#color-mode');
 
 /* User Variables */
 let root = document.querySelector(':root');
+let modeIcon = document.querySelector('#mode-icon');
+let textArea = document.querySelector('.text-area');
 
 /* events */
 one.addEventListener('click', () => {
@@ -58,6 +60,36 @@ zero.addEventListener('click', () => {
 dot.addEventListener('click', () => {
     addToString('.');
 });
+mode.addEventListener('click', () => {
+    changeColorMode();
+})
 
 /* functions */
-
+function changeColorMode() {
+    if (mode.classList.contains('light')) {
+        mode.classList.remove('light');
+        mode.classList.add('dark');
+        if (mode.classList.contains('dark')) {
+            root.style.setProperty('--primary-color', '#5a5a97');
+            root.style.setProperty('--secondary-color', '#1d2951');
+            root.style.setProperty('--dark-color', '#f6f6f6');
+            if (modeIcon.classList.contains('fa-sun')) {
+                modeIcon.classList.remove('fa-sun');
+                modeIcon.classList.add('fa-moon');
+            }
+        }
+    }
+    else {
+        mode.classList.remove('dark');
+        mode.classList.add('light')
+        if (mode.classList.contains('light')) {
+            root.style.setProperty('--primary-color', '#f6f6f6');
+            root.style.setProperty('--secondary-color', '#d0d0d0');
+            root.style.setProperty('--dark-color', '#292929');
+            if (modeIcon.classList.contains('fa-moon')) {
+                modeIcon.classList.remove('fa-moon');
+                modeIcon.classList.add('fa-sun');
+            }
+        }
+    }
+}

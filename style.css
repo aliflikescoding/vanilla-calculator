@@ -20,6 +20,7 @@ body {
     font-family: 'Mulish', sans-serif;
     line-height: 1.6;
     display: flex;
+    color: var(--dark-color);
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -75,6 +76,9 @@ header {
 }
 
 .text-area {
+    display: flex;
+    align-items: center;
+    justify-content: end;
     width: 470px;
     height: 200px;
     margin-left: 5px;
@@ -125,12 +129,12 @@ header {
 
 .button-green {
     background-color: var(--green-color);
-    color: var(--primary-color);
+    color: #f6f6f6;
 }
 
 .button-red {
     background-color: var(--red-color);
-    color: var(--primary-color);
+    color: #f6f6f6;
 }
 
 .light {
