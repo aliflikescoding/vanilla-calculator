@@ -79,6 +79,9 @@ times.addEventListener('click', () => {
 divide.addEventListener('click', () => {
     addOperator('/');
 });
+equal.addEventListener('click', () => {
+    showResult();
+});
 
 /* functions */
 function changeColorMode() {
@@ -120,11 +123,11 @@ areaInside.appendChild(text2);
 function addToString(x) {
     if (numMode === 1) {
         s1 += `${x}`;
-        text1.textContent = `${Number(s1)}`;
+        text1.textContent = `${parseFloat(s1)}`;
     }
     else {
         s2 += `${x}`;
-        text2.textContent = `${Number(s2)}`;
+        text2.textContent = `${parseFloat(s2)}`;
     }
 }
 
@@ -160,4 +163,56 @@ function clearAll() {
     operator.textContent = ``;
     text2.textContent = ``;
     numMode = 1;
+}
+
+function showResult() {
+    if (numMode === 2) {
+        if (s2 !== '') {
+            var x;
+            if (op === '*') {
+                x = mul(parseFloat(s1), parseFloat(s2));
+            }
+            if (op === '+') {
+                x = add(parseFloat(s1), parseFloat(s2));
+            }
+            if (op === '-') {
+                x = sub(parseFloat(s1), parseFloat(s2));
+            }
+            if (op === '/') {
+                x = div(parseFloat(s1), parseFloat(s2));
+            }
+            s1 = `${x}`;
+            op = "";
+            s2 = "";
+            text1.textContent = `${s1}`;
+            operator.textContent = ``;
+            text2.textContent = ``;
+            numMode = 1;
+        }
+    }
+}
+
+function add(a, b) {
+    return a + b;
+}
+
+function sub(a, b) {
+    return a - b;
+}
+
+function mul(a, b) {
+    return a * b;
+}
+
+function div(a, b) {
+    return a / b;
+}
+
+function theresDot(string) {
+    if (string.includes('.')) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
