@@ -29,6 +29,12 @@ let numMode = 1;
 var s1 = "";
 var op = "";
 var s2 = "";
+let text1 = document.createElement('p');
+let text2 = document.createElement('p');
+let operator = document.createElement('p');
+areaInside.appendChild(text1);
+areaInside.appendChild(operator);
+areaInside.appendChild(text2);
 
 /* events */
 one.addEventListener('click', () => {
@@ -118,13 +124,6 @@ function changeColorMode() {
         }
     }
 }
-
-let text1 = document.createElement('p');
-let text2 = document.createElement('p');
-let operator = document.createElement('p');
-areaInside.appendChild(text1);
-areaInside.appendChild(operator);
-areaInside.appendChild(text2);
 
 function addToString(x) {
     if (numMode === 1) {
