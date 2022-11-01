@@ -82,6 +82,12 @@ divide.addEventListener('click', () => {
 equal.addEventListener('click', () => {
     showResult();
 });
+dot.addEventListener('click', () => {
+    addDot();
+});
+backSpace.addEventListener('click', () => {
+    del();
+})
 
 /* functions */
 function changeColorMode() {
@@ -122,12 +128,90 @@ areaInside.appendChild(text2);
 
 function addToString(x) {
     if (numMode === 1) {
-        s1 += `${x}`;
-        text1.textContent = `${parseFloat(s1)}`;
+        if (theresDot(s1)) {
+            var wordsOne = s1.split('.');
+            if (wordsOne[1].length <= 15) {
+                s1 += `${x}`;
+                text1.textContent = `${s1}`;
+            }
+        }
+        else {
+            s1 += `${x}`;
+            text1.textContent = `${parseFloat(s1)}`;
+        }
     }
     else {
-        s2 += `${x}`;
-        text2.textContent = `${parseFloat(s2)}`;
+        // s2 += `${x}`;
+        // if (theresDot(s2) && x === 0) {
+        //     text2.textContent = `${s2}`;
+        // }
+        // else {
+        //     text2.textContent = `${parseFloat(s2)}`;
+        // }
+        if (theresDot(s2)) {
+            var wordsTwo = s2.split('.');
+            if (wordsTwo[1].length <= 15) {
+                s2 += `${x}`;
+                text2.textContent = `${s2}`;
+            }
+        }
+        else {
+            s2 += `${x}`;
+            text2.textContent = `${parseFloat(s2)}`;
+        }
+    }
+}
+
+function del() {
+    if (numMode === 1) {
+        s1 = s1.slice(0,s1.length-1);
+        if (s1 === '') {
+            text1.textContent = "";
+        }
+        else {
+            if (theresDot(s1)) {
+                text1.textContent = `${s1}`;
+            }
+            else {
+                text1.textContent = `${parseFloat(s1)}`;
+            }
+        }
+    }
+    if (numMode === 2) {
+        if (s2 === '') {
+            op = '';
+            operator.textContent = ``;
+            numMode = 1;
+        }
+        else {
+            s2 = s2.slice(0,s2.length-1);
+            if (s2 === '') {
+                text2.textContent = "";
+            }
+            else {
+                if (theresDot(s2)) {
+                    text2.textContent = `${s2}`;
+                }
+                else {
+                    text2.textContent = `${parseFloat(s2)}`;
+                }
+            }
+        }
+    }
+}
+
+function addDot() {
+    if (numMode === 1) {
+        if (theresDot(s1) === false) {
+            s1 += '.';
+            text1.textContent = `${s1}`;
+        }
+    }
+    if (numMode === 2) {
+        if (theresDot(s2) === false) {
+            s2 += '.';
+            text2.textContent = `${s2}`;
+        }
     }
 }
 
@@ -152,6 +236,15 @@ function addOperator(sym) {
             operator.innerHTML = `<i class="fa-solid fa-divide"></i>`;
         }
         numMode = 2;
+    }
+}
+
+function theresDot(string) {
+    if (string.includes('.')) {
+        return true;
+    }
+    else {
+        return false;
     }
 }
 
@@ -206,13 +299,4 @@ function mul(a, b) {
 
 function div(a, b) {
     return a / b;
-}
-
-function theresDot(string) {
-    if (string.includes('.')) {
-        return true;
-    }
-    else {
-        return false;
-    }
 }
