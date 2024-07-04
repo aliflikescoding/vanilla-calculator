@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">Calculator Project in Vanilla javscripot and css</h1>
+  <h1 align="center">Calculator Project in Vanilla HTML, Javascript, and CSS</h1>
 </p>
 
 ## Output
