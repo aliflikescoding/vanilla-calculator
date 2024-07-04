@@ -25,16 +25,4 @@ In this project we used vast amount of modern technologies such as:
 
 something to go live in the html in
 
-### ⚙️ Packages Installation
-
-```shell
-npm i / install
-```
-
-### 🚀 Starting the App 
-
-```shell
-npm run dev
-```
-
 
