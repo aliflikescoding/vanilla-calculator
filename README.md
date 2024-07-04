@@ -4,7 +4,7 @@
 
 ## Output
 
-Visit [https://hmif.codes](https://hmif.codes) to view the full pages
+Visit [The Live Page](https://hmif.codes) to view the full pages
 
 ## Description
 
@@ -15,9 +15,9 @@ An asinged project in The Odin Project Course. It's just a basic calculator proj
 
 In this project we used vast amount of modern technologies such as:
 
-- [HTML]([https://hmif.codes](https://developer.mozilla.org/en-US/docs/Web/HTML))
-- [CSS](https://hmif.codes)
-- [Javascript](https://hmif.codes)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
   
 ## 📖 Additional information
 
