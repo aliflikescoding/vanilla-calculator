@@ -8,7 +8,7 @@ Visit [The Live Page](https://hmif.codes) to view the details
 
 ## Description
 
-An asinged project in The Odin Project Course. It's just a basic calculator project in vanilla html, css, and javascript, in this course you learn the fundementals of selecting html elemetns in javscript and basic javascript logic and css
+An asinged project in The Odin Project Course. It's just a basic calculator project in vanilla html, css, and javascript, in this project you learn the fundementals of selecting html elemetns in javscript and basic javascript logic and css
 
 ---
 ## 🖥️ Technologies
