@@ -4,7 +4,7 @@
 
 ## Output
 
-Visit [The Live Page](https://hmif.codes) to view the full pages
+Visit [The Live Page](https://hmif.codes) to view the details
 
 ## Description
 
